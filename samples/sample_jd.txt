@@ -1,0 +1,45 @@
+Senior Machine Learning Engineer
+
+Location: Remote / San Francisco, CA
+Company: TechCorp AI Labs
+Employment Type: Full-Time
+
+About the Role:
+We are looking for a Senior Machine Learning Engineer to join our AI Platform team.
+You will design, build, and deploy production ML systems at scale, working closely
+with research scientists, product managers, and infrastructure engineers.
+
+Requirements (Must Have):
+- 5+ years of experience in machine learning or data science roles
+- Strong proficiency in Python, PyTorch or TensorFlow
+- Experience with NLP, LLMs, or transformer models (BERT, GPT)
+- Hands-on experience deploying ML models to production (Docker, Kubernetes)
+- Proficiency in SQL and experience with large-scale data pipelines (Spark, Kafka)
+- Experience with AWS or GCP cloud platforms
+- Strong understanding of software engineering best practices (CI/CD, testing)
+
+Preferred Qualifications:
+- Master's degree or PhD in Computer Science, Mathematics, or related field
+- Experience with LangChain, HuggingFace Transformers, or similar LLM frameworks
+- Knowledge of MLflow, Weights & Biases for experiment tracking
+- Experience with distributed training (Horovod, DeepSpeed)
+- Published research or open-source contributions in ML
+
+Responsibilities:
+- Design and implement scalable ML training and inference pipelines
+- Fine-tune and evaluate large language models for production use cases
+- Build robust data preprocessing and feature engineering workflows
+- Collaborate with research team to productionise experimental models
+- Monitor model performance and implement automated retraining pipelines
+- Mentor junior engineers and conduct code reviews
+- Contribute to ML platform architecture decisions
+
+Education:
+- Bachelor's degree in Computer Science, Engineering, or related field required
+- Master's or PhD preferred
+
+What We Offer:
+- Competitive salary: $180,000 – $250,000
+- Remote-first work environment
+- Stock options and annual performance bonus
+- Learning & development budget: $5,000/year

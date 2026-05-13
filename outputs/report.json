@@ -1,0 +1,184 @@
+{
+  "generated_at": "2026-05-09T20:29:55.174073",
+  "job_title": "We are looking for a Senior Machine Learning Engineer to join our AI Platform team.",
+  "jd_summary": {
+    "required_skills": [
+      "python",
+      "machine learning",
+      "nlp",
+      "llm",
+      "langchain",
+      "huggingface",
+      "transformers",
+      "bert",
+      "gpt",
+      "tensorflow"
+    ],
+    "experience_level": "Senior",
+    "domain": "Machine Learning / AI",
+    "education_required": "Phd In Computer Science, Mathematics, Or Related Field"
+  },
+  "statistics": {
+    "total_candidates": 3,
+    "average_score": 4.73,
+    "highest_score": 5.55,
+    "lowest_score": 3.8,
+    "tier_distribution": {
+      "C": 1,
+      "D": 2
+    },
+    "hire_count": 0
+  },
+  "candidates": [
+    {
+      "name": "Aisha Patel",
+      "candidate_id": "7512eaec",
+      "source": "resume_aisha_patel.txt",
+      "scores": {
+        "skills_match": {
+          "score": 6,
+          "weight": 0.3,
+          "justification": "Matched 19/20 required skills: ci/cd, gpt, python, llm, docker"
+        },
+        "experience": {
+          "score": 6,
+          "weight": 0.25,
+          "justification": "8 yrs experience; JD requires 5–8 yrs. Domain relevance: 69%."
+        },
+        "education": {
+          "score": 5,
+          "weight": 0.15,
+          "justification": "Candidate: master (rank 4); JD requires: phd (rank 5). Certifications: 3."
+        },
+        "projects": {
+          "score": 4,
+          "weight": 0.2,
+          "justification": "5 project(s) found. Relevance to JD domain 'Machine Learning / AI': 36%."
+        },
+        "communication": {
+          "score": 7,
+          "weight": 0.1,
+          "justification": "Average communication. 356 words, 7 structured sections detected."
+        }
+      },
+      "total_score": 5.55,
+      "recommendation": "Maybe",
+      "skill_gaps": [
+        "feature engineering"
+      ],
+      "confidence": 1.0,
+      "override_log": [],
+      "rank": 1,
+      "percentile": 100.0,
+      "tier": "C"
+    },
+    {
+      "name": "Marcus Johnson",
+      "candidate_id": "3a90939b",
+      "source": "resume_marcus_johnson.txt",
+      "scores": {
+        "skills_match": {
+          "score": 4,
+          "weight": 0.3,
+          "justification": "Matched 5/20 required skills: python, docker, aws, machine learning, sql"
+        },
+        "experience": {
+          "score": 5,
+          "weight": 0.25,
+          "justification": "6 yrs experience; JD requires 5–8 yrs. Domain relevance: 48%."
+        },
+        "education": {
+          "score": 3,
+          "weight": 0.15,
+          "justification": "Candidate: bachelor (rank 3); JD requires: phd (rank 5). Certifications: 2."
+        },
+        "projects": {
+          "score": 7,
+          "weight": 0.2,
+          "justification": "4 project(s) found. Relevance to JD domain 'Machine Learning / AI': 18%. [OVERRIDE by Demo HR Manager: Reviewed GitHub — has unreported personal ML projects]"
+        },
+        "communication": {
+          "score": 7,
+          "weight": 0.1,
+          "justification": "Average communication. 217 words, 6 structured sections detected."
+        }
+      },
+      "total_score": 5.0,
+      "recommendation": "Maybe",
+      "skill_gaps": [
+        "ci/cd",
+        "gpt",
+        "llm",
+        "kubernetes",
+        "huggingface",
+        "mlflow",
+        "transformers",
+        "feature engineering",
+        "kafka",
+        "gcp",
+        "langchain",
+        "bert",
+        "tensorflow",
+        "nlp",
+        "pytorch"
+      ],
+      "confidence": 1.0,
+      "override_log": [
+        {
+          "timestamp": "2026-05-09T20:29:55.174073",
+          "category": "projects",
+          "old_score": 1,
+          "new_score": 7,
+          "reason": "Reviewed GitHub — has unreported personal ML projects",
+          "overrider": "Demo HR Manager"
+        }
+      ],
+      "rank": 2,
+      "percentile": 66.7,
+      "tier": "C"
+    },
+    {
+      "name": "Priya Sharma",
+      "candidate_id": "65af34bf",
+      "source": "resume_priya_sharma.txt",
+      "scores": {
+        "skills_match": {
+          "score": 6,
+          "weight": 0.3,
+          "justification": "Matched 18/20 required skills: ci/cd, gpt, python, llm, docker"
+        },
+        "experience": {
+          "score": 5,
+          "weight": 0.25,
+          "justification": "7 yrs experience; JD requires 5–8 yrs. Domain relevance: 51%."
+        },
+        "education": {
+          "score": 6,
+          "weight": 0.15,
+          "justification": "Candidate: master (rank 4); JD requires: phd (rank 5). Certifications: 4."
+        },
+        "projects": {
+          "score": 1,
+          "weight": 0.2,
+          "justification": "4 project(s) found. Relevance to JD domain 'Machine Learning / AI': 19%."
+        },
+        "communication": {
+          "score": 7,
+          "weight": 0.1,
+          "justification": "Average communication. 328 words, 7 structured sections detected."
+        }
+      },
+      "total_score": 4.85,
+      "recommendation": "No Hire",
+      "skill_gaps": [
+        "feature engineering",
+        "machine learning"
+      ],
+      "confidence": 1.0,
+      "override_log": [],
+      "rank": 3,
+      "percentile": 33.3,
+      "tier": "D"
+    }
+  ]
+}

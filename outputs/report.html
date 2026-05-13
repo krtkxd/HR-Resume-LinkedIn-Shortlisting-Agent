@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Shortlisting Report – We are looking for a Senior Machine Learning Engineer to join our AI Platform team.</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; }
+  .container { max-width: 1300px; margin: 0 auto; padding: 40px 24px; }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px; padding: 36px 40px; margin-bottom: 32px; }
+  .header h1 { font-size: 2rem; font-weight: 700; color: #fff; }
+  .header p { color: rgba(255,255,255,0.75); margin-top: 6px; font-size: 0.95rem; }
+  .meta-grid { display: flex; gap: 32px; margin-top: 20px; flex-wrap: wrap; }
+  .meta-item { background: rgba(255,255,255,0.15); border-radius: 10px;
+    padding: 12px 20px; backdrop-filter: blur(8px); }
+  .meta-item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.6); }
+  .meta-item .value { font-size: 1.1rem; font-weight: 600; color: #fff; margin-top: 2px; }
+
+  /* Stats bar */
+  .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px; margin-bottom: 32px; }
+  .stat-card { background: #1e2030; border: 1px solid #2d3148;
+    border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-card .num { font-size: 2rem; font-weight: 700; color: #818cf8; }
+  .stat-card .desc { font-size: 0.8rem; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* Table */
+  .table-wrapper { background: #1e2030; border: 1px solid #2d3148; border-radius: 16px; overflow: hidden; margin-bottom: 32px; }
+  table { width: 100%; border-collapse: collapse; }
+  thead { background: #252840; }
+  th { padding: 14px 16px; text-align: left; font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: #94a3b8; font-weight: 600; white-space: nowrap; }
+  td { padding: 14px 16px; border-top: 1px solid #252840; font-size: 0.875rem; vertical-align: middle; }
+  tr:hover td { background: #252840; transition: background 0.15s; }
+
+  /* Rank badge */
+  .rank-badge { display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%; font-weight: 700; font-size: 0.85rem; }
+  .rank-1 { background: linear-gradient(135deg,#f59e0b,#d97706); color:#fff; }
+  .rank-2 { background: linear-gradient(135deg,#94a3b8,#64748b); color:#fff; }
+  .rank-3 { background: linear-gradient(135deg,#b45309,#92400e); color:#fff; }
+  .rank-n { background: #252840; color: #94a3b8; }
+
+  /* Score bar */
+  .score-bar-wrap { display: flex; align-items: center; gap: 10px; }
+  .score-bar { flex: 1; height: 6px; background: #2d3148; border-radius: 3px; overflow: hidden; }
+  .score-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+  .score-text { font-weight: 600; min-width: 28px; text-align: right; }
+
+  /* Mini scores */
+  .mini-scores { display: flex; gap: 6px; flex-wrap: wrap; }
+  .mini-score { padding: 3px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 600;
+    background: #252840; color: #94a3b8; white-space: nowrap; }
+  .mini-score.high { background: #064e3b; color: #34d399; }
+  .mini-score.mid  { background: #1e3a5f; color: #60a5fa; }
+  .mini-score.low  { background: #4c1d1d; color: #f87171; }
+
+  /* Recommendation pill */
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+  .pill-strong-hire { background:#065f46; color:#34d399; }
+  .pill-hire        { background:#1e3a5f; color:#60a5fa; }
+  .pill-maybe       { background:#713f12; color:#fbbf24; }
+  .pill-no-hire     { background:#4c1d1d; color:#f87171; }
+
+  /* Tier badge */
+  .tier { display: inline-block; width: 24px; height: 24px; line-height: 24px;
+    text-align: center; border-radius: 6px; font-size: 0.8rem; font-weight: 700; }
+  .tier-A { background:#065f46; color:#34d399; }
+  .tier-B { background:#1e3a5f; color:#60a5fa; }
+  .tier-C { background:#713f12; color:#fbbf24; }
+  .tier-D { background:#4c1d1d; color:#f87171; }
+
+  /* Detail sections */
+  .detail-section { margin-top: 32px; }
+  .detail-section h2 { font-size: 1.2rem; font-weight: 600; color: #e2e8f0; margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 1px solid #2d3148; }
+  .candidate-card { background: #1e2030; border: 1px solid #2d3148; border-radius: 12px;
+    padding: 24px; margin-bottom: 16px; }
+  .candidate-card h3 { font-size: 1rem; font-weight: 600; color: #c7d2fe; margin-bottom: 4px; }
+  .candidate-card .sub { font-size: 0.8rem; color: #64748b; margin-bottom: 16px; }
+  .rubric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .rubric-item { background: #252840; border-radius: 8px; padding: 14px; }
+  .rubric-item .cat { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em;
+    color: #64748b; margin-bottom: 6px; }
+  .rubric-item .sc { font-size: 1.4rem; font-weight: 700; color: #818cf8; }
+  .rubric-item .just { font-size: 0.75rem; color: #94a3b8; margin-top: 6px; line-height: 1.4; }
+  .skill-gap { margin-top: 12px; }
+  .skill-gap .label { font-size: 0.75rem; color: #f87171; margin-bottom: 6px; }
+  .gap-tag { display: inline-block; padding: 2px 8px; margin: 2px; border-radius: 4px;
+    background: #4c1d1d; color: #fca5a5; font-size: 0.72rem; }
+
+  /* Footer */
+  footer { text-align: center; color: #374151; font-size: 0.8rem; padding-top: 32px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🎯 HR Shortlisting Report</h1>
+    <p>AI-Powered Candidate Evaluation Pipeline</p>
+    <div class="meta-grid">
+      <div class="meta-item"><div class="label">Position</div><div class="value">We are looking for a Senior Machine Learning Engineer to join our AI Platform team.</div></div>
+      <div class="meta-item"><div class="label">Generated</div><div class="value">2026-05-09 20:29 UTC</div></div>
+      <div class="meta-item"><div class="label">Candidates</div><div class="value">3</div></div>
+      <div class="meta-item"><div class="label">Recommended Hires</div><div class="value">0</div></div>
+    </div>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="stats-bar">
+    <div class="stat-card"><div class="num">3</div><div class="desc">Total Evaluated</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="desc">Hire / Strong Hire</div></div>
+    <div class="stat-card"><div class="num">4.7</div><div class="desc">Avg Score</div></div>
+    <div class="stat-card"><div class="num">5.5</div><div class="desc">Top Score</div></div>
+    
+    <div class="stat-card"><div class="num">1</div><div class="desc">Tier C</div></div>
+    
+    <div class="stat-card"><div class="num">2</div><div class="desc">Tier D</div></div>
+    
+  </div>
+
+  <!-- Ranked table -->
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Candidate</th>
+          <th>Tier</th>
+          <th>Skills (30%)</th>
+          <th>Experience (25%)</th>
+          <th>Education (15%)</th>
+          <th>Projects (20%)</th>
+          <th>Communication (10%)</th>
+          <th>Total Score</th>
+          <th>Recommendation</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <tr>
+        <td>
+          <span class="rank-badge rank-1">
+            1
+          </span>
+        </td>
+        <td>
+          <div style="font-weight:600;color:#e2e8f0;">Aisha Patel</div>
+          <div style="font-size:0.75rem;color:#64748b;">RESUME_AISHA_PATEL.TXT · 100.0th pct</div>
+        </td>
+        <td><span class="tier tier-C">C</span></td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:60%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">6</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:60%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">6</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:50%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">5</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:40%;background:#f87171;"></div>
+            </div>
+            <span class="score-text" style="color:#f87171">4</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:70%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">7</span>
+          </div>
+        </td>
+        
+        <td>
+          <div style="font-size:1.3rem;font-weight:700;color:#fbbf24">
+            5.5
+          </div>
+        </td>
+        <td>
+          <span class="pill pill-maybe">
+            Maybe
+          </span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <span class="rank-badge rank-2">
+            2
+          </span>
+        </td>
+        <td>
+          <div style="font-weight:600;color:#e2e8f0;">Marcus Johnson</div>
+          <div style="font-size:0.75rem;color:#64748b;">RESUME_MARCUS_JOHNSON.TXT · 66.7th pct</div>
+        </td>
+        <td><span class="tier tier-C">C</span></td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:40%;background:#f87171;"></div>
+            </div>
+            <span class="score-text" style="color:#f87171">4</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:50%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">5</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:30%;background:#f87171;"></div>
+            </div>
+            <span class="score-text" style="color:#f87171">3</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:70%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">7</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:70%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">7</span>
+          </div>
+        </td>
+        
+        <td>
+          <div style="font-size:1.3rem;font-weight:700;color:#fbbf24">
+            5.0
+          </div>
+        </td>
+        <td>
+          <span class="pill pill-maybe">
+            Maybe
+          </span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <span class="rank-badge rank-3">
+            3
+          </span>
+        </td>
+        <td>
+          <div style="font-weight:600;color:#e2e8f0;">Priya Sharma</div>
+          <div style="font-size:0.75rem;color:#64748b;">RESUME_PRIYA_SHARMA.TXT · 33.3th pct</div>
+        </td>
+        <td><span class="tier tier-D">D</span></td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:60%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">6</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:50%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">5</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:60%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">6</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:10%;background:#f87171;"></div>
+            </div>
+            <span class="score-text" style="color:#f87171">1</span>
+          </div>
+        </td>
+        
+        
+        <td>
+          <div class="score-bar-wrap">
+            <div class="score-bar">
+              <div class="score-fill" style="width:70%;background:#60a5fa;"></div>
+            </div>
+            <span class="score-text" style="color:#60a5fa">7</span>
+          </div>
+        </td>
+        
+        <td>
+          <div style="font-size:1.3rem;font-weight:700;color:#f87171">
+            4.8
+          </div>
+        </td>
+        <td>
+          <span class="pill pill-no-hire">
+            No Hire
+          </span>
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Detailed breakdown -->
+  <div class="detail-section">
+    <h2>📋 Detailed Candidate Breakdown</h2>
+    
+    <div class="candidate-card">
+      <h3>1. Aisha Patel</h3>
+      <div class="sub">
+        Score: 5.55/10 · Maybe · Tier C · Confidence: 100%
+      </div>
+      <div class="rubric-grid">
+        
+        <div class="rubric-item">
+          <div class="cat">Skills Match (30%)</div>
+          <div class="sc">6/10</div>
+          <div class="just">Matched 19/20 required skills: ci/cd, gpt, python, llm, docker</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Experience (25%)</div>
+          <div class="sc">6/10</div>
+          <div class="just">8 yrs experience; JD requires 5–8 yrs. Domain relevance: 69%.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Education (15%)</div>
+          <div class="sc">5/10</div>
+          <div class="just">Candidate: master (rank 4); JD requires: phd (rank 5). Certifications: 3.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Projects (20%)</div>
+          <div class="sc">4/10</div>
+          <div class="just">5 project(s) found. Relevance to JD domain 'Machine Learning / AI': 36%.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Communication (10%)</div>
+          <div class="sc">7/10</div>
+          <div class="just">Average communication. 356 words, 7 structured sections detected.</div>
+        </div>
+        
+      </div>
+      
+      <div class="skill-gap">
+        <div class="label">⚠ Missing Skills:</div>
+        
+        <span class="gap-tag">feature engineering</span>
+        
+      </div>
+      
+      
+    </div>
+    
+    <div class="candidate-card">
+      <h3>2. Marcus Johnson</h3>
+      <div class="sub">
+        Score: 5.00/10 · Maybe · Tier C · Confidence: 100%
+      </div>
+      <div class="rubric-grid">
+        
+        <div class="rubric-item">
+          <div class="cat">Skills Match (30%)</div>
+          <div class="sc">4/10</div>
+          <div class="just">Matched 5/20 required skills: python, docker, aws, machine learning, sql</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Experience (25%)</div>
+          <div class="sc">5/10</div>
+          <div class="just">6 yrs experience; JD requires 5–8 yrs. Domain relevance: 48%.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Education (15%)</div>
+          <div class="sc">3/10</div>
+          <div class="just">Candidate: bachelor (rank 3); JD requires: phd (rank 5). Certifications: 2.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Projects (20%)</div>
+          <div class="sc">7/10</div>
+          <div class="just">4 project(s) found. Relevance to JD domain 'Machine Learning / AI': 18%. [OVERRIDE by Demo HR Manager: Reviewed GitHub — has unreported personal ML projects]</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Communication (10%)</div>
+          <div class="sc">7/10</div>
+          <div class="just">Average communication. 217 words, 6 structured sections detected.</div>
+        </div>
+        
+      </div>
+      
+      <div class="skill-gap">
+        <div class="label">⚠ Missing Skills:</div>
+        
+        <span class="gap-tag">ci/cd</span>
+        
+        <span class="gap-tag">gpt</span>
+        
+        <span class="gap-tag">llm</span>
+        
+        <span class="gap-tag">kubernetes</span>
+        
+        <span class="gap-tag">huggingface</span>
+        
+        <span class="gap-tag">mlflow</span>
+        
+        <span class="gap-tag">transformers</span>
+        
+        <span class="gap-tag">feature engineering</span>
+        
+        <span class="gap-tag">kafka</span>
+        
+        <span class="gap-tag">gcp</span>
+        
+      </div>
+      
+      
+      <div style="margin-top:12px;padding:10px;background:#1a1a2e;border-radius:6px;font-size:0.75rem;color:#94a3b8;">
+        <strong style="color:#fbbf24;">Manual Overrides:</strong>
+        
+        <div>2026-05-09T20:29:55.174073 — projects: 1→7 by Demo HR Manager (Reviewed GitHub — has unreported personal ML projects)</div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="candidate-card">
+      <h3>3. Priya Sharma</h3>
+      <div class="sub">
+        Score: 4.85/10 · No Hire · Tier D · Confidence: 100%
+      </div>
+      <div class="rubric-grid">
+        
+        <div class="rubric-item">
+          <div class="cat">Skills Match (30%)</div>
+          <div class="sc">6/10</div>
+          <div class="just">Matched 18/20 required skills: ci/cd, gpt, python, llm, docker</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Experience (25%)</div>
+          <div class="sc">5/10</div>
+          <div class="just">7 yrs experience; JD requires 5–8 yrs. Domain relevance: 51%.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Education (15%)</div>
+          <div class="sc">6/10</div>
+          <div class="just">Candidate: master (rank 4); JD requires: phd (rank 5). Certifications: 4.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Projects (20%)</div>
+          <div class="sc">1/10</div>
+          <div class="just">4 project(s) found. Relevance to JD domain 'Machine Learning / AI': 19%.</div>
+        </div>
+        
+        <div class="rubric-item">
+          <div class="cat">Communication (10%)</div>
+          <div class="sc">7/10</div>
+          <div class="just">Average communication. 328 words, 7 structured sections detected.</div>
+        </div>
+        
+      </div>
+      
+      <div class="skill-gap">
+        <div class="label">⚠ Missing Skills:</div>
+        
+        <span class="gap-tag">feature engineering</span>
+        
+        <span class="gap-tag">machine learning</span>
+        
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <footer>
+    Generated by HR Resume & LinkedIn Shortlisting Agent · 2026-05-09 20:29 UTC
+  </footer>
+</div>
+</body>
+</html>

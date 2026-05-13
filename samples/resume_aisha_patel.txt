@@ -1,0 +1,71 @@
+Aisha Patel
+aisha.patel@gmail.com
++1-415-555-0192
+San Francisco, CA | linkedin.com/in/aishapatel | github.com/aishapatel-ml
+
+Summary
+Senior Machine Learning Engineer with 7 years of experience building and deploying
+large-scale ML systems. Specialised in NLP, LLMs, and MLOps. Deep expertise in
+PyTorch, HuggingFace Transformers, and cloud-native ML platforms (AWS SageMaker,
+GCP Vertex AI). Passionate about bridging research and production.
+
+Experience
+
+Senior ML Engineer
+Stripe Inc.
+Jan 2022 - Present
+
+- Led development of a real-time fraud detection system using LightGBM and
+  transformer-based embeddings, reducing fraud losses by 34%.
+- Fine-tuned BERT and GPT-3 models for transaction classification achieving
+  92% accuracy on production data.
+- Built end-to-end MLflow-based experiment tracking platform used by 40+ engineers.
+- Deployed models on Kubernetes (EKS) with auto-scaling and Prometheus monitoring.
+- Mentored 5 junior ML engineers; led weekly ML reading groups.
+
+Machine Learning Engineer
+Airbnb
+Mar 2019 - Dec 2021
+
+- Developed ranking models (XGBoost, LightGBM) for search result personalisation.
+- Built ETL pipelines on Apache Spark processing 2TB+ daily data on Databricks.
+- Implemented A/B testing framework reducing experiment time by 40%.
+- Integrated models into production via REST APIs (FastAPI, Docker).
+
+Data Scientist
+Walmart Labs
+Jun 2017 - Feb 2019
+
+- Built demand forecasting models using LSTM and classical time series methods.
+- Created automated data pipeline using Airflow and Python.
+- Worked with SQL (PostgreSQL, BigQuery) for large-scale data analysis.
+
+Education
+
+Master of Science in Computer Science
+Stanford University
+2017
+Thesis: "Neural Approaches to Document Ranking in Information Retrieval"
+
+Bachelor of Engineering in Computer Science
+IIT Bombay
+2015
+
+Certifications
+- AWS Certified Machine Learning Specialty (2023)
+- Google Professional Data Engineer (2022)
+- DeepLearning.AI Deep Learning Specialization
+
+Skills
+Python, PyTorch, TensorFlow, Keras, HuggingFace Transformers, LangChain,
+BERT, GPT, NLP, Machine Learning, Deep Learning, MLflow, Weights and Biases,
+SQL, PostgreSQL, Apache Spark, Kafka, Airflow, Docker, Kubernetes,
+AWS, GCP, FastAPI, scikit-learn, XGBoost, LightGBM, Databricks,
+CI/CD, GitHub Actions, Redis, Elasticsearch
+
+Projects
+- Open-source LLM evaluation framework (500+ GitHub stars): benchmarks instruction-
+  tuned models on reasoning tasks using automated evaluation pipelines.
+- RAG-based internal knowledge assistant at Stripe: integrated with Confluence and
+  Slack, reducing support tickets by 25%.
+- Kaggle Competitions: Top 5% in NLP competitions (2020, 2021).

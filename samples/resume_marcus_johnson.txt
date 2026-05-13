@@ -1,0 +1,48 @@
+Marcus Johnson
+marcus.johnson@outlook.com
++1-312-555-0847
+Chicago, IL
+
+OBJECTIVE
+Motivated software engineer with 3 years of experience seeking opportunities in
+data science and machine learning. Quick learner eager to apply analytical skills.
+
+WORK EXPERIENCE
+
+Software Engineer II
+Accenture Technology Solutions
+August 2021 - Present
+
+- Developed RESTful APIs using Python Flask for enterprise clients.
+- Wrote SQL queries for data extraction and reporting dashboards.
+- Participated in Agile sprints and daily stand-ups.
+- Created automated test suites with pytest improving code coverage to 78%.
+- Worked with React frontend to display data visualisations (D3.js).
+
+Junior Developer
+StartupXYZ
+July 2020 - July 2021
+
+- Built backend microservices using Node.js and Express.
+- Managed PostgreSQL database schemas and performed query optimisation.
+- Collaborated with cross-functional teams using Jira and Confluence.
+
+EDUCATION
+
+Bachelor of Science in Information Technology
+University of Illinois Chicago
+2020
+
+Online Courses:
+- Coursera Machine Learning by Andrew Ng (2022)
+- Udemy Python for Data Science and Machine Learning (2023)
+
+SKILLS
+Python, Flask, Node.js, JavaScript, SQL, PostgreSQL, React, Docker, Git,
+Pandas, NumPy, Matplotlib, scikit-learn (basic), AWS (basic), Agile, Scrum
+
+PROJECTS
+- Sentiment Analysis Tool: built a basic sentiment classifier using sklearn TF-IDF
+  and logistic regression for product reviews. Personal project.
+- Sales Dashboard: developed an interactive dashboard using Plotly and Dash
+  displaying sales KPIs for a mock e-commerce dataset.

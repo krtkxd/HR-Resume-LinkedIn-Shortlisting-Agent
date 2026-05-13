@@ -1,0 +1,63 @@
+{
+  "programming_languages": [
+    "python", "java", "javascript", "typescript", "c++", "c#", "go", "rust",
+    "kotlin", "swift", "scala", "r", "matlab", "julia", "ruby", "php", "perl"
+  ],
+  "ml_ai": [
+    "machine learning", "deep learning", "neural networks", "nlp", "computer vision",
+    "reinforcement learning", "transfer learning", "generative ai", "llm",
+    "langchain", "huggingface", "transformers", "bert", "gpt", "stable diffusion",
+    "tensorflow", "pytorch", "keras", "sklearn", "scikit-learn", "xgboost",
+    "lightgbm", "catboost", "random forest", "gradient boosting", "svm",
+    "regression", "classification", "clustering", "recommendation systems",
+    "feature engineering", "model deployment", "mlflow", "weights and biases",
+    "optuna", "ray tune", "onnx", "triton", "torchserve"
+  ],
+  "data_engineering": [
+    "sql", "nosql", "mongodb", "postgresql", "mysql", "sqlite", "redis",
+    "elasticsearch", "apache spark", "hadoop", "kafka", "airflow", "dbt",
+    "databricks", "snowflake", "bigquery", "redshift", "etl", "data pipeline",
+    "data warehouse", "data lake", "delta lake", "apache beam", "flink",
+    "pandas", "numpy", "polars", "dask"
+  ],
+  "cloud_devops": [
+    "aws", "gcp", "azure", "docker", "kubernetes", "terraform", "ansible",
+    "ci/cd", "jenkins", "github actions", "gitlab ci", "helm", "prometheus",
+    "grafana", "istio", "serverless", "lambda", "cloud functions", "ec2",
+    "s3", "gcs", "blob storage", "sagemaker", "vertex ai", "azure ml"
+  ],
+  "web_backend": [
+    "fastapi", "flask", "django", "node.js", "express", "spring boot",
+    "graphql", "rest api", "grpc", "microservices", "rabbitmq", "celery",
+    "nginx", "apache", "websockets"
+  ],
+  "web_frontend": [
+    "react", "vue", "angular", "next.js", "svelte", "html", "css",
+    "tailwindcss", "bootstrap", "webpack", "vite", "d3.js", "three.js"
+  ],
+  "soft_skills": [
+    "leadership", "communication", "teamwork", "problem solving",
+    "critical thinking", "project management", "agile", "scrum", "kanban",
+    "mentoring", "stakeholder management", "cross-functional collaboration"
+  ],
+  "certifications": [
+    "aws certified", "google cloud certified", "azure certified",
+    "tensorflow developer", "deeplearning.ai", "coursera", "udacity",
+    "databricks certified", "cka", "ckad", "pmp", "scrum master"
+  ],
+  "education_levels": {
+    "phd": 5,
+    "doctorate": 5,
+    "master": 4,
+    "msc": 4,
+    "mtech": 4,
+    "mba": 4,
+    "bachelor": 3,
+    "bsc": 3,
+    "btech": 3,
+    "be": 3,
+    "associate": 2,
+    "diploma": 2,
+    "high school": 1
+  }
+}

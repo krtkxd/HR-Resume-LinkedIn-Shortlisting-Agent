@@ -1,0 +1,68 @@
+Priya Sharma
+priya.sharma@email.com | +91-98765-43210
+Bangalore, India | github.com/priyasharma-ai
+
+SUMMARY
+ML Research Engineer with 5 years of experience at the intersection of research
+and production. Extensive background in NLP, transformer architectures, and
+scalable ML systems. Published 3 IEEE papers on efficient transformer training.
+Strong Python and PyTorch expertise. AWS certified.
+
+EXPERIENCE
+
+ML Research Engineer
+Google DeepMind (Contract)
+February 2023 - Present
+
+- Researched efficient fine-tuning methods (LoRA, QLoRA, PEFT) for large
+  language models reducing training costs by 60%.
+- Implemented custom CUDA kernels for attention mechanisms improving
+  inference throughput by 45%.
+- Built evaluation pipelines for LLM benchmarks (MMLU, HumanEval, HellaSwag).
+
+ML Engineer
+Flipkart AI Labs
+September 2020 - January 2023
+
+- Designed multi-modal product recommendation system using CLIP embeddings
+  and collaborative filtering, increasing CTR by 18%.
+- Productionised 12+ ML models using Docker + Kubernetes on AWS EKS.
+- Built feature store on Apache Spark + Redis for real-time feature serving.
+- Maintained Airflow DAGs for data pipeline orchestration.
+
+Research Assistant (NLP)
+IIT Delhi
+June 2019 - August 2020
+
+- Worked on cross-lingual NLP models for low-resource Indian languages.
+- Published papers on multilingual BERT adaptations.
+- Developed annotation tools using Python and FastAPI.
+
+EDUCATION
+
+Master of Technology in Artificial Intelligence
+IIT Delhi
+2019
+
+Bachelor of Engineering in Computer Science
+VIT University
+2017
+
+CERTIFICATIONS
+- AWS Certified ML Specialty (2022)
+- DeepLearning.AI MLOps Specialization
+- NVIDIA Deep Learning Institute – Transformer Architecture
+- Kaggle Competitions Expert (Top 3%)
+
+TECHNICAL SKILLS
+Python, PyTorch, TensorFlow, HuggingFace Transformers, LangChain, OpenAI APIs,
+NLP, BERT, GPT, T5, LLaMA, LoRA, PEFT, MLflow, Weights and Biases, Optuna,
+Apache Spark, Kafka, Airflow, SQL, PostgreSQL, Redis, Elasticsearch,
+Docker, Kubernetes, AWS SageMaker, GCP Vertex AI, FastAPI, scikit-learn,
+CUDA, Triton Inference Server, ONNX, CI/CD, GitHub Actions
+
+PROJECTS & PUBLICATIONS
+- "Efficient LoRA Fine-tuning of LLMs for Domain Adaptation" – IEEE ICML 2023
+- "Multilingual BERT for Low-resource Indian Languages" – ACL 2021
+- Open-source: multilingual-eval toolkit (800+ GitHub stars)
+- Kaggle: 1st place, NLP with Disaster Tweets competition
